@@ -1,6 +1,7 @@
 import React from "react";
 
 import colibtri from '../img/colibri.jpg';
+import MyPosts from './MyPosts'
 
 const Profile =()=>{
     return(
@@ -9,16 +10,7 @@ const Profile =()=>{
       <div>
         Ava + desc
       </div>
-      <div>
-        My post
-        <div>
-          new post
-        </div>
-        <div>
-          <div>post1</div>
-          <div>post2</div>
-        </div>
-      </div>
+      <MyPosts/>
       </div>
     )
 }
