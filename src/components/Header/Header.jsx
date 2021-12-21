@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../img/logo-social.png';
+import logo from '../../img/logo-social.png';
 const Header = ()=>{
     return(
     <header className='header'>

@@ -63,8 +63,13 @@
 .nav {
   grid-area: n;
   background-color: rgb(189, 189, 236);
+  border-radius: 10px;
 }
 .main-content {
   grid-area: m;
-  background-color: rgb(105, 165, 135);
+  background-color: rgb(192, 238, 207);
+  border-radius: 10px;
 }
+/* .item{
+  
+} */

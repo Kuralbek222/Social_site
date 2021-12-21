@@ -1,0 +1,15 @@
+.stNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stNav a {
+  font-size: 30px;
+  color: rgb(243, 234, 234);
+  text-align: center;
+  text-decoration: none;
+}
+
+.stNav a.activeLink {
+  color: rgb(228, 150, 98);
+}

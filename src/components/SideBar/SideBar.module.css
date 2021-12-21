@@ -1,0 +1,11 @@
+.friendsLi {
+  color: black;
+  background-color: rgb(241, 217, 217);
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+.friendsLi li {
+  padding: 10px;
+}
