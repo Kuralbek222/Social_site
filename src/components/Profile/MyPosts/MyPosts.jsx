@@ -15,8 +15,8 @@ let addPostActionCreator = ()=>{
     let newPostmessage = React.createRef()
   
     let addpostik=()=>{
-        let text = {
-            postmessage: newPostmessage.current.value}
+        let text =  newPostmessage.current.value
+        console.log(postMessage)
         postMessage.addpost(text)
     }
 
@@ -28,6 +28,7 @@ let addPostActionCreator = ()=>{
          <br/><button onClick={addpostik}>add posts</button>
          <button>remove</button>
          {postMessage.postMessage.map(post=>{
+             console.log(post)
             return (<Post post={post} key={post.id}/>)
          })}
        </div>

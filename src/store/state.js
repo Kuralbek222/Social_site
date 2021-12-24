@@ -4,6 +4,8 @@ let reRender = ()=> {
     console.log('state is changed')
 }
 
+
+
 let store = {
     _state : {
         postMessage :[
@@ -13,12 +15,14 @@ let store = {
         {id:4,postmessage:'My friend', likeCount:0}
     ]
 },
+
  getState(){
-    return this._state
+    return this._state.postMessage
 },
- diSpatch(action,text){
-     console.log(text)
-    profileReducer(this._state,action)         
+ diSpatch(action){
+    //  console.log(action)
+    profileReducer(this._state,action)   
+   
     reRender()      
         },
 }
@@ -27,6 +31,7 @@ let store = {
     reRender = observer
  }
  export let dispatch = store.diSpatch.bind(store)
+ export let getST = store.getState.bind(store)
 
 
 export default store;

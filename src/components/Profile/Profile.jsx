@@ -1,16 +1,19 @@
-import { object } from "prop-types";
+import { func, object } from "prop-types";
 import React from "react";
-import Store,{dispatch} from "../../store/state";
+import Store,{dispatch,getST} from "../../store/state";
 import MyPosts from './MyPosts/MyPosts';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
+import subscribe from '../../store/state'
 
 
 
 
 
-const postMessage = Store._state.postMessage
-const getState = Store.getState()
-const actionCreatorProfile = ()=>({type:'ADD-POST'})
+
+
+
+
+// const actionCreatorProfile = ()=>({type:'ADD-POST'})
 
 
 // let addPost=(text)=>{
@@ -23,17 +26,20 @@ const addPost =(text)=>{
     type: 'ADD-POST',
     text,
   }
-  return dispatch(actionCreatorProfile(),text) 
+  return dispatch(action) 
 }
     
-const Profile =(state)=>{
+
+  const Profile =(state)=>{
 
     return(
         <div className='main-content'>
           <ProfileInfo/>
-      <MyPosts postMessage={postMessage} addpost={addPost}/>
+      <MyPosts postMessage={getST()} addpost={addPost}/>
       </div>
     )
 }
+
+
 
 export default Profile;
