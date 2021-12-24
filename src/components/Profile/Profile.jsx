@@ -3,35 +3,12 @@ import React from "react";
 import Store,{dispatch,getST} from "../../store/state";
 import MyPosts from './MyPosts/MyPosts';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
-import subscribe from '../../store/state'
+import {actionCreatorProfile} from '../../store/reducer'
 
-
-
-
-
-
-
-
-
-// const actionCreatorProfile = ()=>({type:'ADD-POST'})
-
-
-// let addPost=(text)=>{
-//   let obj = {id:postMessage.length + 1}
-//   postMessage.push(Object.assign(obj,text))
-//   console.log(postMessage)
-// }
 const addPost =(text)=>{
-  let action = {
-    type: 'ADD-POST',
-    text,
-  }
-  return dispatch(action) 
+  return dispatch(actionCreatorProfile(text)) 
 }
-    
-
   const Profile =(state)=>{
-
     return(
         <div className='main-content'>
           <ProfileInfo/>
@@ -39,7 +16,5 @@ const addPost =(text)=>{
       </div>
     )
 }
-
-
 
 export default Profile;

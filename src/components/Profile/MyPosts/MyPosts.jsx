@@ -1,34 +1,20 @@
-import React from 'react'
+import React,{ useState } from 'react'
 import classes from './MyPosts.module.css'
 import Post from './Post/Post'
 
-
-let addPostActionCreator = ()=>{
-    return {
-        type:'ADD-POST'
-    }
-}
-
-
- const MyPosts = (postMessage) => {
-
-    let newPostmessage = React.createRef()
-  
+const MyPosts = (postMessage) => {
+const [state, setstate] = useState()
     let addpostik=()=>{
-        let text =  newPostmessage.current.value
-        console.log(postMessage)
-        postMessage.addpost(text)
+        postMessage.addpost(state)
     }
-
     return (
         <div>
         My post
         <div className={classes.MyPosts__st}>
-         <textarea ref={newPostmessage}></textarea>
+         <textarea onChange={(e)=>setstate(e.target.value)}></textarea>
          <br/><button onClick={addpostik}>add posts</button>
          <button>remove</button>
          {postMessage.postMessage.map(post=>{
-             console.log(post)
             return (<Post post={post} key={post.id}/>)
          })}
        </div>
