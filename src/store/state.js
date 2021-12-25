@@ -1,11 +1,8 @@
 import {profileReducer} from './reducer'
-import store from './'
 
-let reRender = ()=> {
+ export let reRender = ()=> {
     console.log('state is changed')
 }
-
-
 
 let storeOld = {
     _state : {
@@ -21,7 +18,7 @@ let storeOld = {
     return this._state.postMessage
 },
  diSpatch(action){
-    profileReducer(this._state,action)    
+    profileReducer(this._state,action)   
     reRender()      
         },
 }
@@ -32,5 +29,3 @@ let storeOld = {
  export let dispatch = storeOld.diSpatch.bind(storeOld)
  export let getST = storeOld.getState.bind(storeOld)
 
-
-export default store;

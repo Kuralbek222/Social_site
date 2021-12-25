@@ -13,8 +13,7 @@ import Styl from './Post.module.css'
      const likeChange = ()=>{
      state===imgLike1?setstate(imgLike2):setstate(imgLike1)
     }
-
-
+    
     return (
         <div>
          <div className={Styl.item}>   

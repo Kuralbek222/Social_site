@@ -1,20 +1,28 @@
 import { func, object } from "prop-types";
 import React from "react";
-import Store,{dispatch,getST} from "../../store/state";
-import MyPosts from './MyPosts/MyPosts';
-import ProfileInfo from './ProfileInfo/ProfileInfo';
-import {actionCreatorProfile} from '../../store/reducer'
+import MyPosts from "./MyPosts/MyPosts";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
+import { actionCreatorProfile } from "../../store/reducer";
+import { reRender } from "../../store/state";
+import StoreContext from "../../store/StoreContext";
 
-const addPost =(text)=>{
-  return dispatch(actionCreatorProfile(text)) 
-}
-  const Profile =(state)=>{
-    return(
-        <div className='main-content'>
-          <ProfileInfo/>
-      <MyPosts postMessage={getST()} addpost={addPost}/>
-      </div>
-    )
-}
+const Profile = () => {
+  return (
+    <StoreContext.Consumer>
+      {(store) => {
+        const addPost = (text) => {
+          store.dispatch(actionCreatorProfile(text));
+          reRender();
+        };
+        return (
+          <div className="main-content">
+            <ProfileInfo />
+            <MyPosts postMessage={store.getState()} addpost={addPost} />
+          </div>
+        );
+      }}
+    </StoreContext.Consumer>
+  );
+};
 
 export default Profile;

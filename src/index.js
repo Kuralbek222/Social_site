@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import store from './store/state'
+
 import { BrowserRouter } from "react-router-dom";
 import {subscribe} from './store/state'
+
 import './index.css';
 
 import App from './App';
@@ -11,9 +12,7 @@ import reportWebVitals from './reportWebVitals';
 let reRenderEntireTree = ()=>{
 ReactDOM.render(
   <BrowserRouter>
-   <React.StrictMode>
-     <App state={store}/>
-   </React.StrictMode>
+     <App />
    </BrowserRouter>
   ,
    document.getElementById('root')
