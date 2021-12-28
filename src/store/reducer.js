@@ -4,7 +4,7 @@ export const actionCreatorDialogs =  (text) => ({type:'ADD-Dial',text})
 
 let initialState ={
         postMessage :[
-        {id:1,postmessage:'Hello', likeCount:0},
+        {id:1,postmessage:'Hello', likeCount:0 },
         {id:2,postmessage:'I like', likeCount:0},
         {id:3,postmessage:'You', likeCount:0},
         {id:4,postmessage:'My friend', likeCount:0}
@@ -43,13 +43,18 @@ export const DialogsR = (state = initial,action)=>{
 }
 
 
-let initDialState = {
+export let initDialState = {
     dataWithUser :[
-        {id:1, name:'Алмат',message:'Hi'},
-        {id:2, name:'Саша'},
-        {id:3, name:'Бауыржан'},
-        {id:4, name:'Нурсултан'},
-        {id:5, name:'Диана'},
+        {id:1, name:'Алмат',
+        location:{city:'Almaty',country:'Kazakhstan'}},
+        {id:2, name:'Саша',
+        location:{city:'Almaty',country:'Kazakhstan'}},
+        {id:3, name:'Бауыржан',
+        location:{city:'Almaty',country:'Kazakhstan'}},
+        {id:4, name:'Нурсултан',
+        location:{city:'Nursultan',country:'Kazakhstan'}},
+        {id:5, name:'Диана',
+        location:{city:'Almaty',country:'Kazakhstan'}},
     ],
     dataMessage :[
         {id:1,message:'HI'},

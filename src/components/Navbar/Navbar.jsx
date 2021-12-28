@@ -2,8 +2,8 @@ import React from "react";
 import Styl from "./Navbar.module.css";
 import SideBar from "../SideBar/SideBar";
 import styled from "styled-components";
-
 import { Link, NavLink } from "react-router-dom";
+
 const Otstup = styled.a`
   padding: 10px;
 `;
@@ -40,11 +40,6 @@ const Navbar = () => {
         </NavLink>
       </div>
       <div></div>
-      <div className={Styl.stNav}>
-        <NavLink to="/settings" className={(props) => objActive(props)}>
-          Настройки
-        </NavLink>
-      </div>
       <Otstup></Otstup>
       <div className={Styl.stNav}>
         <NavLink to="/users" className={(props) => objActive(props)}>
@@ -52,6 +47,13 @@ const Navbar = () => {
         </NavLink>
       </div>
       <div></div>
+      <Otstup></Otstup>
+      <div className={Styl.stNav}>
+        <NavLink to="/settings" className={(props) => objActive(props)}>
+          Настройки
+        </NavLink>
+      </div>
+      <Otstup></Otstup>
       <div>
         <SideBar />
       </div>
