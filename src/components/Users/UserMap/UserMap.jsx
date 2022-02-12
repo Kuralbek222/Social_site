@@ -6,7 +6,7 @@ const Otstup = styled.a`
   padding: 10px;
 `;
 const UserMap = (props) => {
-  console.log(props.map.name);
+  // console.log(props.map.name);
   return (
     <div>
       <div>

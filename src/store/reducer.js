@@ -1,4 +1,5 @@
 
+
 export const actionCreatorProfile =  (text) => ({type:'ADD-POST',text})
 export const actionCreatorDialogs =  (text) => ({type:'ADD-Dial',text})
 
@@ -41,6 +42,8 @@ export const DialogsR = (state = initial,action)=>{
     }
     return state;
 }
+
+
 
 
 export let initDialState = {

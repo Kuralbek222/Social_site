@@ -3,12 +3,14 @@ import { connect } from "react-redux";
 import Dialogs from "./Dialogs"
 import { actionCreatorDialogs } from "../../store/reducer";
 import { reRender } from "../../store/state";
+import StoreContext from "../../store/StoreContext";
 
-const mapStateToProps = (state)=>{
-    return {
-        ldataWithUser: state
-    }
-}
+// const mapStateToProps = (state)=>{
+//     console.log(state)
+//     return {
+//         ldataWithUser: state
+//     }
+// }
 //  const DialogsContainer1 =(store)=>{
 //       console.log(store);
 //      const addMessage =(text)=>{
@@ -21,6 +23,7 @@ const mapStateToProps = (state)=>{
 //     )
 // }
 const mapDispatchToProps =(dispatch,store)=>{
+    console.log(store)
     return{    
         addMessage: (text)=>{     
         let action = actionCreatorDialogs(text)
@@ -30,7 +33,6 @@ const mapDispatchToProps =(dispatch,store)=>{
 }
 }
 const mapStateProps =(store)=>{
-
     return{
         store:  store.DialogsReducer
     }

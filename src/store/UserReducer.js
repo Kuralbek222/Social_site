@@ -1,9 +1,10 @@
 import {initDialState} from './reducer'
+import * as axios from "axios"
 import _ from 'lodash'
 
 const FOLLOW = 'FOLLOW'
 const UNFOLLOW = 'UNFOLLOW'
-export const UserReducer = (state = initDialState,action  ) => {
+export const UserReducer = (state = initDialState,action  ) => {  
     let stateCopy = _.cloneDeep(state)
     switch(action.type){
         case FOLLOW: 
