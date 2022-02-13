@@ -8,6 +8,9 @@
   padding-left: 10%;
   background-color: aliceblue;
 }
+.selectedPage {
+  font-weight: bold;
+}
 .telo {
   display: grid;
   grid-template-columns: 10% 60%;
@@ -35,4 +38,23 @@
   position: relative;
   width: auto;
   max-width: 50px;
+}
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dialog_message {
+  height: 30px;
+  width: 300px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+.dialog_button {
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  height: 20px;
+  width: 100px;
 }

@@ -28,8 +28,7 @@ const App = ()=> {
         <Route path='/news' element={<News/>}></Route> 
         <Route path='/music' element={<Music/>}></Route> 
         <Route path='/settings' element={<Settings/>}></Route>
-        <Route path='/users' element={<Users  store={store}/>}></Route>
-        <Route path='/UserContainer' element={<UserContainer  store={store}/>}></Route>
+        <Route path='/users' element={<UserContainer  store={store}/>}></Route>
         {/* <Route
           path="/dialogs/1"
           element={<Message data= {store.getState().DialogsReducer.dataWithUser}/>}

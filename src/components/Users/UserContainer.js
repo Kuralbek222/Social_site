@@ -2,21 +2,28 @@ import React from 'react'
 import { connect } from "react-redux";
 import Users from './Users'
 import { reRender } from "../../store/state";
+import { followAc,setUsersAc,setCurPageAc } from "../../store/UserReducer";
 
-const mapDispatchToProps  =(dispatch,store)=>{
-console.log(store)
+const mapDispatchToProps  =(dispatch)=>{
 return{    
-    addMessage: (text)=>{     
-    // let action = actionCreatorDialogs(text)
-    reRender()
-    // dispatch(action)      
+    addfollow: (UserId)=>{
+     dispatch(followAc(UserId))   
+    //  reRender()
+    },
+    setCurPage:(p)=>{
+        dispatch(setCurPageAc(p))
+    },
+    setUsers: (Users) => {
+        dispatch(setUsersAc(Users))
+    }
 }
 }
-}
-const mapStateProps =(store)=>{
-    console.log(store)
+const mapStateProps =(state)=>{
 return{
-    store:  store.UserReducer
+    users:  state.UserReducer,
+    pageSize: state.UserReducer.pageSize,
+    totalUserCount:state.UserReducer.totalUserCount,
+    currentPage: state.UserReducer.currentPage,
 }
 }
 
